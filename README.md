@@ -1,6 +1,6 @@
 # csv-filter
 # How-To
-The easiest way to run this problem is to click the "play" button from an IDE
+The easiest way to run this problem is to click the "play" button from an IDE\
 This program can also be run by using command line "python3 main.py"
 
 # Assumptions
