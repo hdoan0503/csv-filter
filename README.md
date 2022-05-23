@@ -1,29 +1,12 @@
-# csv-filter-challenge-public
-# Instructions
-1. Click "Use this template" to create a copy of this repository in your personal github account.  
-1. Using technology of your choice, complete assignment listed below.
-1. Update the README in your new repo with:
-    * a `How-To` section containing any instructions needed to execute your program.
-    * an `Assumptions` section containing documentation on any assumptions made while interpreting the requirements.
-1. Send an email to Scoir (andrew@scoir.com) with a link to your newly created repo containing the completed exercise.
+# csv-filter
+# How-To
+The easiest way to run this problem is to click the "play" button from an IDE
+This program can also be run by using command line "python3 main.py"
 
-## Expectations
-1. This exercise is meant to drive a conversation. 
-1. Please invest only enough time needed to demonstrate your approach to problem solving, code design, etc.
-1. Within reason, treat your solution as if it would become a production system.
-
-## Assignment
-Create a command line application that parses a CSV file and filters the data per user input.
-
-The CSV will contain three fields: `first_name`, `last_name`, and `dob`. The `dob` field will be a date in YYYYMMDD format.
-
-The user should be prompted to filter by `first_name`, `last_name`, or birth year. The application should then accept a name or year and return all records that match the value for the provided filter. 
-
-Example input:
-```
-first_name,last_name,dob
-Bobby,Tables,19700101
-Ken,Thompson,19430204
-Rob,Pike,19560101
-Robert,Griesemer,19640609
-```
+# Assumptions
+I assume the csv file will be provided, so I created a csv function to accept the any csv file and start to parse them into a list of record
+I assume the user will enter first name, last name "OR" birth year whichever they want to enter we will filter the record for them
+I assume the first name or last name from the user input have to be matched exactly our record which means if the user want to search for Bobby but the user just enter Bob, the program will not return the record which have the name Bobby. (1)
+I assume the user only need to enter birth year, if the user enter the whole dob, the program will not return the result. (2)
+From (1) and (2) I assume no wildcards search is allowed. If in the future, the user want to use the wildcards search, we can improve the program.
+I assume no case sensitive which means the user can either enter Bobby or bobby and the program can still filter out the results.
